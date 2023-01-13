@@ -1,0 +1,73 @@
+@model server.Models.ItemStatusModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ItemStatusModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ItemID" class="control-label"></label>
+                <input asp-for="ItemID" class="form-control" />
+                <span asp-validation-for="ItemID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ATK" class="control-label"></label>
+                <input asp-for="ATK" class="form-control" />
+                <span asp-validation-for="ATK" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HP" class="control-label"></label>
+                <input asp-for="HP" class="form-control" />
+                <span asp-validation-for="HP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DEF" class="control-label"></label>
+                <input asp-for="DEF" class="form-control" />
+                <span asp-validation-for="DEF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CRI" class="control-label"></label>
+                <input asp-for="CRI" class="form-control" />
+                <span asp-validation-for="CRI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Speed" class="control-label"></label>
+                <input asp-for="Speed" class="form-control" />
+                <span asp-validation-for="Speed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CRIDMG" class="control-label"></label>
+                <input asp-for="CRIDMG" class="form-control" />
+                <span asp-validation-for="CRIDMG" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ASPD" class="control-label"></label>
+                <input asp-for="ASPD" class="form-control" />
+                <span asp-validation-for="ASPD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EVA" class="control-label"></label>
+                <input asp-for="EVA" class="form-control" />
+                <span asp-validation-for="EVA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

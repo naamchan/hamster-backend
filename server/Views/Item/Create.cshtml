@@ -1,0 +1,93 @@
+@model server.Models.ItemModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ItemModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ID" class="control-label"></label>
+                <input asp-for="ID" class="form-control" />
+                <span asp-validation-for="ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Picture" class="control-label"></label>
+                <input asp-for="Picture" class="form-control" />
+                <span asp-validation-for="Picture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CVA" class="control-label"></label>
+                <input asp-for="CVA" class="form-control" />
+                <span asp-validation-for="CVA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gold" class="control-label"></label>
+                <input asp-for="Gold" class="form-control" />
+                <span asp-validation-for="Gold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gem" class="control-label"></label>
+                <input asp-for="Gem" class="form-control" />
+                <span asp-validation-for="Gem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SellStatus" class="control-label"></label>
+                <select asp-for="SellStatus" class="form-control"></select>
+                <span asp-validation-for="SellStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Level" class="control-label"></label>
+                <input asp-for="Level" class="form-control" />
+                <span asp-validation-for="Level" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Energy" class="control-label"></label>
+                <input asp-for="Energy" class="form-control" />
+                <span asp-validation-for="Energy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedAt" class="control-label"></label>
+                <input asp-for="CreatedAt" class="form-control" />
+                <span asp-validation-for="CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdatedAt" class="control-label"></label>
+                <input asp-for="UpdatedAt" class="form-control" />
+                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemGroupRefID" class="control-label"></label>
+                <input asp-for="ItemGroupRefID" class="form-control" />
+                <span asp-validation-for="ItemGroupRefID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlayerID" class="control-label"></label>
+                <input asp-for="PlayerID" class="form-control" />
+                <span asp-validation-for="PlayerID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,54 @@
+@model server.Models.PlayerModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PlayerModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CVA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CVA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gold)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gold)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TopScore)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TopScore)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BestTimeMilliseconds)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BestTimeMilliseconds)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.PlayerID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
