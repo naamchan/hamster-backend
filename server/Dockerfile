@@ -10,7 +10,7 @@ RUN dotnet publish -c Release -o out
 
 # SQLite
 RUN dotnet tool restore
-RUN dotnet ef dbcontext scaffold "Data Source=hamster.db" Microsoft.EntityFrameworkCore.Sqlite
+RUN dotnet ef database update 
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:7.0
